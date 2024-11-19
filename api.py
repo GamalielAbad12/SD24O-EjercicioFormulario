@@ -19,7 +19,7 @@ async def guardar_fotos(nombre:str=Form(...), direccion:str=Form(...), foto:Uplo
     print(nombre)
     print(direccion)
     print(paseVip)
-    home_usuario = "/fotos"
+    home_usuario = os.path.expanduser("~")
     carpeta_vip = f"{home_usuario}/fotos-usuarios-vip"
     carpeta_no_vip = f"{home_usuario}/fotos-usuarios"
 
